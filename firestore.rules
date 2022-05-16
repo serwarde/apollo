@@ -1,0 +1,38 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    //poll overview saves polls details for each user
+    match /poll-overview/{uid} {
+      allow read, write: if isOwner(uid);
+    }
+
+    // the collection of all available polls
+    match /polls {
+      allow read, write: if isLoggedIn();
+    }
+
+    // the collection of all polls, including all of their attributes,
+    // since the poll key is random, it should be sufficient to just allow read for all
+    // everyone should be able to read it, since we also want unauthenticated users
+    //  to vote (they need the questions for that)
+    match /poll-details {
+      allow read;
+    }
+
+    // results can be only read to prevent (more) vote maipulation
+    match /poll-results {
+      allow read;
+      allow write;
+    }
+
+    function isLoggedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return request.auth.uid == uid;
+    }
+
+  }
+}

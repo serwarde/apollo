@@ -1,0 +1,10 @@
+{
+    "apiKey": "AIzaSyClK5pyVyEVJmFTIz8iR-zI2PBFBztTwNg",
+    "authDomain": "awesome-poll-app.firebaseapp.com",
+    "databaseURL": "https://awesome-poll-app-default-rtdb.europe-west1.firebasedatabase.app",
+    "projectId": "awesome-poll-app",
+    "storageBucket": "awesome-poll-app.appspot.com",
+    "messagingSenderId": "22485641319",
+    "appId": "1:22485641319:web:f054f40f7b04e7ad394cc2",
+    "measurementId": "G-R9BZZLK3L2"
+}

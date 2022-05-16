@@ -1,0 +1,7 @@
+targets:
+  $default:
+    builders:
+      injectable_generator:injectable_builder:
+        options:
+          auto_register: true
+          file_name_pattern: ".service.dart|.repository.dart"

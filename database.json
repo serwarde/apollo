@@ -1,0 +1,145 @@
+{
+  "users": {
+    "test_user": {
+      "preferences": {
+        "theme": "dark",
+        "send_notifications": false
+      }
+    },
+    "xnqjhBk1wMZCYn2i33mDY4VZyFq2": {
+      "preferences": {
+        "theme": "darker",
+        "send_notifications": true
+      }
+    }
+  },
+  "poll-overview": {
+    "test_user": {
+      "helene_fischer_poll": {
+        "title": "Unfrage zu Helene Fischer",
+        "startTime": 1637447209,
+        "endTime": 1637747209,
+        "participants": 2
+      }
+    },
+    "xnqjhBk1wMZCYn2i33mDY4VZyFq2": {
+      "haftbefehl_poll": {
+        "title": "Unfrage zu Haftbefehl",
+        "startTime": 1637447209,
+        "endTime": 1637747209,
+        "participants": 1
+      }
+    }
+  },
+  "poll-details": {
+    "haftbefehl_poll": {
+      "title": "Unfrage zu Haftbefehl",
+      "startTime": 1637447209,
+      "endTime": 1637747209,
+      "longitude": 111,
+      "latitude": 222,
+      "radius": 333,
+      "owner": "xnqjhBk1wMZCYn2i33mDY4VZyFq2",
+      "questions": {
+        "_first": "-MpBSkEQ8I0hI1erFzIm",
+        "-MpBSkEQ8I0hI1erFzIm": {
+          "next" : null,
+          "text": "Was ist dein Lieblingssong von Haftbefehl?",
+          "type": "radio",
+          "radio": {
+            "options": {
+              "_first": "-MpBSkEQ8I0hI1erFzIm",
+              "-MpBUfw-ltH7BQKe6o--": {
+                "next": "MpBUnRzuV6MKXW9ZZCi",
+                "value": "Wieder am Block"
+              },
+              "-MpBUnRzuV6MKXW9ZZCi": {
+                "next": "MpBUsgYPGMdrG02g9Y_",
+                "value": "Aufzug"
+              },
+              "MpBUsgYPGMdrG02g9Y_": {
+                "next": "MpBUsgYPGMdrG02g9Y_",
+                "value": "Lebe Leben"
+              },
+              "-MpBUz4T4XwrE4u2L8-m": {
+                "value": "Chabos wissen wer der Babo ist"
+              }
+            }
+          },
+          "validators": {
+            "required": true
+          }
+        }
+      }
+    }
+  },
+  "polls": {
+    "haftbefehl_poll": {
+      "title": "Unfrage zu Haftbefehl",
+      "startTime": 1637447209,
+      "endTime": 1637747209,
+        "longitude": 111,
+        "latitude": 222,
+        "radius": 333
+    
+    },
+    "-Mp93v59apmifIMVT9Mk" : {
+      "title": "Wann geht bei euch die Sonne unter?",
+      "startTime": 1637447209,
+      "endTime": 1637747209,
+        "longitude": 111,
+        "latitude": 222,
+        "radius": 333
+    }
+  },
+  "poll-results" : {
+    "haftbefehl_poll" : {
+      "overview": {
+        "-MpBSkEQ8I0hI1erFzIm": {
+          "-MpBUfw-ltH7BQKe6o--": {
+            "count": 1
+          },
+          "-MpBUnRzuV6MKXW9ZZCi": {
+            "count": 0
+          },
+          "MpBUsgYPGMdrG02g9Y_": {
+            "count": 0
+          },
+          "-MpBUz4T4XwrE4u2L8-m": {
+            "count": 0
+          }
+        }
+      },
+      "answers": {
+        "xnqjhBk1wMZCYn2i33mDY4VZyFq2+salt" : {
+          "-MpBSkEQ8I0hI1erFzIm" : {
+            "value": "-MpBUfw-ltH7BQKe6o--"
+          },
+          "-MpBSq89EnxZIh1P-_13" : {
+            "value": "Wenn man gut getrunken hat, kommt schon ein bisschen Nostalgie hoch."
+          }
+        }
+      },
+      "participates" : [
+        "xnqjhBk1wMZCYn2i33mDY4VZyFq2"
+      ]
+    },
+    "-Mp93v59apmifIMVT9Mk" : {
+      "answers": {
+        "xnqjhBk1wMZCYn2i33mDY4VZyFq2+salt" : {
+          "-MpBXB6iwD8Cz_O_7a-P" : {
+            "value": 1637667424
+          }
+        },
+        "test_user+salt" : {
+          "-MpBXB6iwD8Cz_O_7a-P" : {
+            "value": 1637555555
+          }
+        }
+      },
+      "participates" : [
+        "xnqjhBk1wMZCYn2i33mDY4VZyFq2", "test_user"
+      ]
+    }
+  }
+}

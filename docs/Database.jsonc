@@ -1,0 +1,195 @@
+{
+  "users": {
+    "test_user": { //users id
+      "preferences": { // various properties, which should be bound to account
+        "theme": "dark",
+        "send_notifications": false
+      }
+    },
+    "xnqjhBk1wMZCYn2i33mDY4VZyFq2": {
+      "preferences": {
+        "theme": "darker",
+        "send_notifications": true
+      }
+    }
+  },
+  "poll-overview": {
+    "test_user": {
+      "helene_fischer_poll": {
+        "title": "Unfrage zu Helene Fischer",
+        "time-start": 1637447209,
+        "time-end": 1637747209,
+        "is-draft": true,
+        "participants": 2
+      }
+    },
+    "xnqjhBk1wMZCYn2i33mDY4VZyFq2": {
+      "haftbefehl_poll": {
+        "title": "Unfrage zu Haftbefehl",
+        "time-start": 1637447209,
+        "time-end": 1637747209,
+        "is-draft": false,
+        "participants": 1
+      },
+      "-Mp93v59apmifIMVT9Mk": {
+        "title": "Wann geht bei euch die Sonne unter?",
+        "time-start": 1637447209,
+        "time-end": 1637747209,
+        "is-draft": false,
+        "participants": 0
+      },
+      "-Mp947cMD7gTZbb4fi9m": {
+        "title": "Wie wird wohl morgen das Wetter?",
+        "time-start": 1637447209,
+        "time-end": 1637747209,
+        "is-draft": true,
+        "participants": 0
+      }
+    }
+  },
+  "poll-details": { //if poll needs to be created/edited/filled out
+    "haftbefehl_poll": {
+      "title": "Unfrage zu Haftbefehl",
+      "time-start": 1637447209,
+      "time-end": 1637747209,
+      "location": {
+        "longitude": 111,
+        "latitude": 222,
+        "radius": 333
+      },
+      "owner": "xnqjhBk1wMZCYn2i33mDY4VZyFq2", // reference, so we dont have to query users
+      "inline-single": false,
+      "questions": {
+        "-MpBSkEQ8I0hI1erFzIm": {
+          "text": "Was ist dein Lieblingssong von Haftbefehl?",
+          "radio": {
+            "options": {
+              "-MpBUfw-ltH7BQKe6o--": "Wieder am Block",
+              "-MpBUnRzuV6MKXW9ZZCi": "Aufzug",
+              "MpBUsgYPGMdrG02g9Y_": "Lebe Leben",
+              "-MpBUz4T4XwrE4u2L8-m": "Chabos wissen wer der Babo ist"
+            }
+          },
+          "validators": {
+            "required": true
+          }
+        },
+        "-MpBSq89EnxZIh1P-_13": {
+          "text": "Warum ist Haftbefehl der beste Rapper?",
+          "free-text": {
+            "initial": "Ich mag Haftbefehl, weil..."
+          },
+          "validators": {
+            "required": false,
+            "max-length": 300
+          }
+        }
+      }
+    },
+    "-Mp93v59apmifIMVT9Mk" : {
+      "title": "Wann geht bei euch die Sonne unter?",
+      "time-start": 1637447209,
+      "time-end": 1637747209,
+      "location": {
+        "longitude": 111,
+        "latitude": 222,
+        "radius": 333
+      },
+      "owner": "xnqjhBk1wMZCYn2i33mDY4VZyFq2",
+      "question-inline": true, //if a poll consists of only one question, there might be a different ui display
+      "questions": {
+        "-MpBXB6iwD8Cz_O_7a-P" : {
+          "title": "Wann geht bei euch die Sonne unter?",
+          "time": {
+            "initial": 1637667424
+          },
+          "validators": {
+            "required": true
+          }
+        }
+      }
+    }
+  },
+  "polls": { // mainly for finding polls based on their locaion, see readme
+    "haftbefehl_poll": {
+      "title": "Unfrage zu Haftbefehl",
+      "time-start": 1637447209,
+      "time-end": 1637747209,
+      "location": {
+        "longitude": 111,
+        "latitude": 222,
+        "radius": 333
+      }
+    },
+    "-Mp93v59apmifIMVT9Mk" : {
+      "title": "Wann geht bei euch die Sonne unter?",
+      "time-start": 1637447209,
+      "time-end": 1637747209,
+      "location": {
+        "longitude": 111,
+        "latitude": 222,
+        "radius": 333
+      }
+    }
+  },
+  "poll-results" : {
+    "haftbefehl_poll" : {
+      "overview": { // accumulated results, so we dont have to recalculate every single time
+        "-MpBSkEQ8I0hI1erFzIm": {
+          "-MpBUfw-ltH7BQKe6o--": {
+            "count": 1
+          },
+          "-MpBUnRzuV6MKXW9ZZCi": {
+            "count": 0
+          },
+          "MpBUsgYPGMdrG02g9Y_": {
+            "count": 0
+          },
+          "-MpBUz4T4XwrE4u2L8-m": {
+            "count": 0
+          }
+        }
+      },
+      "answers": {
+          "-MpBSkEQ8I0hI1erFzIm" : {
+            "value": "-MpBUfw-ltH7BQKe6o--"
+          },
+          "-MpBSq89EnxZIh1P-_13" : {
+            "value": "Wenn man gut getrunken hat, kommt schon ein bisschen Nostalgie hoch."
+          }
+        }
+      },
+      "participates" : [
+        "xnqjhBk1wMZCYn2i33mDY4VZyFq2"
+      ]
+    },
+    "-Mp93v59apmifIMVT9Mk" : {
+      "answers": {
+        /*
+         * When a user participates, he sends his answer together with his user-id and a hash.
+         * The hash is computed on the client-side by his user-id concatenated with a
+         * random number (salt) which is stored on the clients device.
+         * The hash is stored in the database together with the answer, so that the user can
+         * later change his answer by sending the same hash.
+         * To ensure, that all users can only participate once, the user-ids will be stored
+         * in a list (participants), which is not linked to the specific answers the users gave.
+         * Each time an answer is submitted, the server checks, whether the user id is not
+         * already in that list.
+         */
+        "xnqjhBk1wMZCYn2i33mDY4VZyFq2+salt" : {
+          "-MpBXB6iwD8Cz_O_7a-P" : {
+            "value": 1637667424
+          }
+        },
+        "test_user+salt" : {
+          "-MpBXB6iwD8Cz_O_7a-P" : {
+            "value": 1637555555
+          }
+        }
+      },
+      "participates" : [
+        "xnqjhBk1wMZCYn2i33mDY4VZyFq2", "test_user"
+      ]
+    }
+  }
+}
